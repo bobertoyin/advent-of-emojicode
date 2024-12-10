@@ -6,6 +6,6 @@ compile: | compile-shared
 	@emojicodec $(year)/$(day).🍇 -o target/$(year)/$(day).o
 
 execute:
-	@./target/$(year)/$(day).o
+	@./target/$(year)/$(day).o $(year) $(day)
 
 run: | compile execute
