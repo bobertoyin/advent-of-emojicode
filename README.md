@@ -11,5 +11,5 @@ make compile year=<YEAR> day=<DAY>
 make execute year=<YEAR> day=<DAY>
 
 # compile + execute
-make run
+make run year=<YEAR> day=<DAY>
 ```
