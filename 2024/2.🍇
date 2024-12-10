@@ -1,0 +1,86 @@
+📦 shared 🏠
+
+🏁 🍇
+  🤓🐇🗿❗️ ➡️ input
+  🔫 input 🔤❌n🔤 ❗️ ➡️ reports
+
+  🍇🎍🥡 jump 🔢 ➡️ 👌 
+    🏧 jump ❗️ ➡️ magnitude
+    ↩️ magnitude ◀️🙌 3 🤝 magnitude ▶️🙌 1
+  🍉 ➡️ valid_magnitude
+
+  🍇 levels 🍨🐚🔢🍆 ➡️ 👌 
+    👍 ➡️ 🖍🆕 magnitude
+    0 ➡️ 🖍🆕 positive
+    0 ➡️ 🖍🆕 negative
+    0 ➡️ 🖍🆕 index
+    🔁 index ◀️ 📏 levels ❓ ➖ 1 🍇
+      🐽 levels index ➕ 1 ❗️ ➖ 🐽 levels index ❗️ ➡️ jump
+      magnitude ⬅️🤝 ⁉️ valid_magnitude jump ❗️
+      ↪️ jump ▶️ 0 🍇 positive ⬅️➕ 1 🍉
+      ↪️ jump ◀️ 0 🍇 negative ⬅️➕ 1 🍉
+      index ⬅️➕ 1
+    🍉
+    ↩️ magnitude 🤝 🤜 positive 🙌 0 👐 negative 🙌 0 🤛
+  🍉 ➡️ valid_dampened
+
+  0 ➡️ 🖍️🆕 safe_total
+  0 ➡️ 🖍️🆕 safe_dampened_total
+  🔂 report reports 🍇
+    🔫 report 🔤 🔤 ❗️ ➡️ report_components
+    🆕🍨🐚🔢🍆▶️🐴 📏 report_components ❓ ❗️ ➡️ 🖍🆕 levels
+    🔂 level report_components 🍇 🐻 levels 🍺 🔢 level 10 ❗️ ❗️ 🍉
+
+    📏 levels ❓ ➡️ num_levels
+    🆕🍨🐚🔢🍆▶️🐴 num_levels ➖ 1 ❗️ ➡️ 🖍🆕 jumps
+    0 ➡️ 🖍🆕 index
+    🔁 index ◀️ num_levels ➖ 1 🍇
+      🐻 jumps 🐽 levels index ➕ 1 ❗️ ➖ 🐽 levels index ❗️ ❗️
+      index ⬅️➕ 1
+    🍉
+
+    🆕🍯🐚🔢🍆 ❗️ ➡️ 🖍🆕 bad_magnitudes
+    🆕🍯🐚🔢🍆 ❗️ ➡️ 🖍🆕 positives
+    🆕🍯🐚🔢🍆 ❗️ ➡️ 🖍🆕 negatives
+    0 ➡️ 🖍 index
+    🔂 jump jumps 🍇
+      ↪️ ❎ ⁉️ valid_magnitude jump ❗️ ❗️ 🍇 0 ➡️ 🐽 bad_magnitudes 🔡 index ❗️ ❗️ 🍉
+      ↪️ jump ▶️ 0 🍇 0 ➡️ 🐽 positives 🔡 index ❗️ ❗️ 🍉
+      ↪️ jump ◀️ 0 🍇 0 ➡️ 🐽 negatives 🔡 index ❗️ ❗️ 🍉
+      index ⬅️➕ 1
+    🍉
+
+    📏 positives ❓ ➡️ num_positives
+    📏 negatives ❓ ➡️ num_negatives
+    ↪️ 📏 bad_magnitudes ❓ 🙌 0 🤝 🤜 num_positives 🙌 0 👐 num_negatives 🙌 0 🤛 🍇
+      safe_total ⬅️➕ 1
+      safe_dampened_total ⬅️➕ 1
+    🍉
+    🙅↪️ 📏 bad_magnitudes ❓ ◀️🙌 1 👐 num_positives ◀️🙌 1 👐 num_negatives ◀️🙌 1 🍇
+      🆕🍯🐚🔢🍆❗️ ➡️ 🖍🆕 candidates
+      🔂 candidate 🐙 bad_magnitudes ❗️ 🍇
+        0 ➡️ 🐽 candidates candidate ❗️
+      🍉
+      🆕🍨🐚🔡🍆❗️ ➡️ 🖍🆕 pos_neg_candidates
+      ↪️ num_positives ▶️ num_negatives 🍇 🐙 negatives ❗️ ➡️ 🖍 pos_neg_candidates 🍉
+      ↪️ num_positives ◀️🙌 num_negatives 🍇 🐙 positives ❗️ ➡️ 🖍 pos_neg_candidates 🍉
+      🔂 candidate pos_neg_candidates 🍇 0 ➡️ 🐽 candidates candidate ❗️ 🍉
+
+      👎 ➡️ 🖍🆕 dampened
+      🔂 candidate 🐙 candidates ❗️ 🍇
+        🍺 🔢 candidate 10 ❗️ ➡️ jump_index
+        levels ➡️ 🖍🆕 levels_a
+        levels ➡️ 🖍🆕 levels_b
+        🐨 levels_a jump_index ❗️
+        🐨 levels_b jump_index ➕ 1 ❗️
+        dampened ⬅️👐 ⁉️ valid_dampened levels_a ❗️
+        dampened ⬅️👐 ⁉️ valid_dampened levels_b ❗️
+      🍉
+      ↪️ dampened 🍇 safe_dampened_total ⬅️➕ 1 🍉
+    🍉
+
+  🍉
+
+  😀 🔤part one: 🧲safe_total🧲🔤 ❗️
+  😀 🔤part two: 🧲safe_dampened_total🧲🔤 ❗️
+🍉
