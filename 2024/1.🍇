@@ -1,0 +1,53 @@
+📦 shared 🏠
+
+🏁 🍇
+  🤓🐇🗿 2024 1 ❗️ ➡️ input
+  🔫 input 🔤❌n🔤 ❗️ ➡️ lines
+  📏 lines ❓ ➡️ num_lines
+  🆕🍨🐚🔢🍆▶️🐴 num_lines ❗️ ➡️ 🖍🆕 left_list
+  🆕🍨🐚🔢🍆▶️🐴 num_lines ❗️ ➡️ 🖍🆕 right_list
+
+  🔂 line lines 🍇
+    🔫 line 🔤   🔤 ❗️ ➡️ items
+    🍺 🔢 🐽 items 0 ❗️ 10 ❗️ ➡️ left_value
+    🍺 🔢 🐽 items 1 ❗️ 10 ❗️ ➡️ right_value
+    🐻 left_list left_value ❗️
+    🐻 right_list right_value ❗️
+  🍉
+
+  🍇 a 🔢 b 🔢 ➡️ 🔢 ↩️ a ➖ b 🍉 ➡️ comparator
+  🦁 left_list comparator ❗️
+  🦁 right_list comparator ❗️
+
+  0 ➡️ 🖍🆕 index
+  0 ➡️ 🖍🆕 distance
+  🆕🍯🐚🔢🍆 ❗️ ➡️ 🖍🆕 right_freq
+  🔂 right_item right_list 🍇
+    🐽 left_list index ❗️ ➡️ left_item
+    distance ⬅️➕ 🏧 left_item ➖ right_item ❗️
+    index ⬅️➕ 1
+
+    🔡 right_item ❗️ ➡️ right_item_key
+    ↪️ 🐣 right_freq right_item_key ❗️ 🍇
+      🍺 🐽 right_freq right_item_key ❗️ ➡️ 🖍🆕 right_item_freq
+      right_item_freq ⬅️➕ 1
+      right_item_freq ➡️ 🐽 right_freq right_item_key ❗️
+    🍉
+    🙅 🍇
+      1 ➡️ 🐽 right_freq right_item_key ❗️
+    🍉
+  🍉
+
+  0 ➡️ 🖍🆕 similarity
+  🔂 left_item left_list 🍇
+    🔡 left_item ❗️ ➡️ left_item_key
+    0 ➡️ 🖍🆕 right_item_freq
+    ↪️ 🐣 right_freq left_item_key ❗️ 🍇
+      🍺 🐽 right_freq left_item_key ❗️ ➡️ 🖍 right_item_freq
+    🍉
+    similarity ⬅️➕ left_item ✖️ right_item_freq
+  🍉
+
+  😀 🔤part one: 🧲distance🧲🔤 ❗️
+  😀 🔤part two: 🧲similarity🧲🔤 ❗️
+🍉

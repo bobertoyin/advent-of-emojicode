@@ -1,0 +1,6 @@
+/target
+/input
+/packages/**/*.a
+/packages/**/🏛
+/packages/**/*.o
+.DS_STORE
