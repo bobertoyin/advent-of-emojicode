@@ -1,0 +1,95 @@
+📦 shared 🏠
+
+🏁 🍇
+  🔫 🤓🐇🗿❗️ 🔤❌n🔤 ❗️ ➡️ program
+
+  🔤mul(🔤 ➡️ start_token
+  🔤,🔤 ➡️ sep_token
+  🔤)🔤 ➡️ end_token
+  🔤do()🔤 ➡️ do_token
+  🔤don't()🔤 ➡️ dont_token
+
+  0 ➡️ 🖍️🆕 total
+  0 ➡️ 🖍️🆕 total_with_toggles
+  👍 ➡️ 🖍️🆕 current_state
+  🔂 memory program 🍇
+    🆕🍯🐚🔢🍆 ❗️ ➡️ 🖍🆕 hits
+    🔍 memory start_token ❗️ ➡️ 🖍️🆕 hit
+    🔁 ❎ hit 🙌 🤷‍ ❗️ 🍇
+      🍺 hit ➡️ hit_index
+
+      hit_index ➕ 4 ➡️ 🖍️🆕 arg_index
+      🆕🔠❗️ ➡️ 🖍️🆕 arg_builder
+
+      👍 ➡️ 🖍️🆕 loop
+      👎 ➡️ 🖍️🆕 correct_stop
+      🔁 loop 🍇
+        🔪 memory arg_index 1 ❗️ ➡️ character 
+        ↪️ ❎ 🔢 character 10 ❗️ 🙌 🤷 ❗️ 🍇
+          🐻 arg_builder character ❗️
+        🍉
+        🙅 🍇 👎 ➡️ 🖍️ loop 🍉
+        ↪️ character 🙌 sep_token 🍇 👍 ➡️ 🖍️ correct_stop 🍉
+        arg_index ⬅️➕ 1
+      🍉
+
+      🔢 🔡 arg_builder ❗️ 10 ❗️ ➡️ first_arg
+
+      🆕🔠❗️ ➡️ 🖍️ arg_builder
+      ↪️ correct_stop 🤝 ❎ first_arg  🙌 🤷 ❗️ 🍇
+        🍺 first_arg ➡️ first_arg_unwrapped
+        👍 ➡️ 🖍️ loop
+        👎 ➡️ 🖍️ correct_stop
+        🔁 loop 🍇
+          🔪 memory arg_index 1 ❗️ ➡️ character 
+          ↪️ ❎ 🔢 character 10 ❗️ 🙌 🤷 ❗️ 🍇
+            🐻 arg_builder character ❗️
+          🍉
+          🙅 🍇 👎 ➡️ 🖍️ loop 🍉
+          ↪️ character 🙌 end_token 🍇 👍 ➡️ 🖍️ correct_stop 🍉
+          arg_index ⬅️➕ 1
+        🍉
+
+        🔢 🔡 arg_builder ❗️ 10 ❗️ ➡️ second_arg
+        ↪️ correct_stop 🤝 ❎ second_arg 🙌 🤷 ❗️ 🍇
+          🍺 second_arg ➡️ second_arg_unwrapped
+          first_arg_unwrapped ✖️ second_arg_unwrapped ➡️ 🐽 hits 🔡 hit_index ❗️ ❗️
+        🍉 
+      🍉
+      🕵‍♀ memory start_token hit_index ➕ 1 ❗️ ➡️ 🖍️ hit
+    🍉
+
+    🆕🍯🐚👌🍆 ❗️ ➡️ 🖍🆕 toggles
+    🔍 memory do_token ❗️ ➡️ 🖍️ hit
+    🔁 ❎ hit 🙌 🤷‍ ❗️ 🍇
+      🍺 hit ➡️ hit_index
+      👍 ➡️ 🐽 toggles 🔡 hit_index ❗️ ❗️
+      🕵‍♀ memory do_token hit_index ➕ 1 ❗️ ➡️ 🖍️ hit
+    🍉
+    🔍 memory dont_token ❗️ ➡️ 🖍️ hit
+    🔁 ❎ hit 🙌 🤷‍ ❗️ 🍇
+      🍺 hit ➡️ hit_index
+      👎 ➡️ 🐽 toggles 🔡 hit_index ❗️ ❗️
+      🕵‍♀ memory dont_token hit_index ➕ 1 ❗️ ➡️ 🖍️ hit
+    🍉
+
+    📏 🎶 memory ❗️ ❓ ➡️ grapheme_count
+    0 ➡️ 🖍️🆕 index
+    🔁 index ◀️ grapheme_count 🍇 💭 too lazy, just loop through every index 
+      🔡 index ❗️ ➡️ index_key
+      🐽 toggles index_key ❗️ ➡️ toggle
+      ↪️ ❎ toggle 🙌 🤷 ❗️ 🍇 🍺 toggle ➡️ 🖍️ current_state 🍉
+      🐽 hits index_key ❗️ ➡️ mul
+      ↪️ ❎ mul 🙌 🤷 ❗️ 🍇 
+        🍺 mul ➡️ mul_val
+        total ⬅️➕ mul_val
+        ↪️ current_state 🍇 total_with_toggles ⬅️➕ mul_val 🍉
+      🍉
+      index ⬅️➕ 1
+    🍉
+  🍉
+
+
+  😀 🔤part one: 🧲total🧲🔤 ❗️
+  😀 🔤part two: 🧲total_with_toggles🧲🔤 ❗️
+🍉
