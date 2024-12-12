@@ -1,0 +1,122 @@
+📦 shared 🏠
+
+🏁 🍇
+  🔤XMAS🔤 ➡️ xmas_token
+  🔤MAS🔤 ➡️ mas_token
+  🔫 🤓🐇🗿❗️ 🔤❌n🔤 ❗️ ➡️ rows
+  📏 rows ❓ ➡️ num_rows
+  📏 🎶 🐽 rows 0 ❗️ ❗️ ❓ ➡️ num_columns
+  🆕🍨🐚🔡🍆▶️🐴 num_rows ❗️ ➡️ 🖍🆕 columns
+  num_rows ➕ num_columns ➖ 1 ➡️ num_diagonals
+  🆕🍨🐚🔡🍆▶️🐴 num_diagonals ❗️ ➡️ 🖍🆕 diagonals
+
+  🍇 string 🔡 ➡️ 🔡
+    🎶 string ❗️ ➡️ 🖍️🆕 str_list
+    🦔 str_list ❗️
+    🆕🔠❗️ ➡️ reverse_builder
+    🔂 letter str_list 🍇 🐻 reverse_builder letter ❗️ 🍉
+    ↩️ 🔡 reverse_builder ❗️
+  🍉 ➡️ reverse_string
+
+  🍇 string 🔡 token 🔡 ➡️ 🔢
+    0 ➡️ 🖍️🆕 hits
+    🔍 string token ❗️ ➡️ 🖍️🆕 hit
+    🔁 ❎ hit 🙌 🤷‍ ❗️ 🍇
+      🍺 hit ➡️ hit_index
+      hits ⬅️➕ 1
+      🕵‍♀ string token hit_index ➕ 1 ❗️ ➡️ 🖍️ hit
+    🍉
+    ↩️ hits
+  🍉 ➡️ count_hits
+
+
+  🔂 i 🆕⏩ 0 num_columns ❗️ 🍇
+    🆕🔠❗️ ➡️ column
+    🔂 row rows 🍇 🐻 column 🔪 row i 1 ❗️❗️ 🍉
+    🐻 columns 🔡 column ❗️❗️
+  🍉
+
+  🔂 col_idx 🆕⏩ 0 num_columns ❗️ 🍇
+    🆕🔠❗️ ➡️ 🖍🆕 diagonal
+    col_idx ➡️ 🖍🆕 i
+    0 ➡️ 🖍🆕 j
+    🔁 i ◀️ num_columns 🍇
+      🐻 diagonal 🔪 🐽 rows j ❗️ i 1 ❗️ ❗️
+      i ⬅️➕ 1
+      j ⬅️➕ 1  
+    🍉
+    🐻 diagonals 🔡 diagonal ❗️❗️
+    🆕🔠❗️ ➡️ 🖍 diagonal
+    col_idx ➡️ 🖍 i
+    0 ➡️ 🖍 j
+    🔁 i ▶️🙌 0 🍇
+      🐻 diagonal 🔪 🐽 rows j ❗️ i 1 ❗️ ❗️
+      i ⬅️➖ 1
+      j ⬅️➕ 1  
+    🍉
+    🐻 diagonals 🔡 diagonal ❗️❗️
+  🍉
+
+  🔂 row_idx 🆕⏩ 1 num_rows ❗️ 🍇
+    🆕🔠❗️ ➡️ 🖍🆕 diagonal
+    0 ➡️ 🖍🆕 i
+    row_idx ➡️ 🖍🆕 j
+    🔁 j ◀️ num_rows 🍇
+      🐻 diagonal 🔪 🐽 rows j ❗️ i 1 ❗️ ❗️
+      i ⬅️➕ 1
+      j ⬅️➕ 1  
+    🍉
+    🐻 diagonals 🔡 diagonal ❗️❗️
+    🆕🔠❗️ ➡️ 🖍 diagonal
+    num_columns ➖ 1 ➡️ 🖍 i
+    row_idx ➡️ 🖍 j
+    🔁 j ◀️ num_rows 🍇
+      🐻 diagonal 🔪 🐽 rows j ❗️ i 1 ❗️ ❗️
+      i ⬅️➖ 1
+      j ⬅️➕ 1  
+    🍉
+    🐻 diagonals 🔡 diagonal ❗️❗️
+  🍉
+
+  0 ➡️ 🖍️🆕 xmas
+  🆕🍨🐚🔡🍆▶️🐴 num_rows ➕ num_columns ➕ num_diagonals ❗️ ➡️ 🖍🆕 strings
+
+  🔂 row rows 🍇 🐻 strings row ❗️ 🍉
+  🔂 column columns 🍇 🐻 strings column ❗️ 🍉
+  🔂 diagonal diagonals 🍇 🐻 strings diagonal ❗️ 🍉
+
+  🔂 string strings 🍇
+    xmas ⬅️➕ ⁉️ count_hits string xmas_token ❗️
+    ⁉️ reverse_string string ❗️ ➡️ reverse
+    xmas ⬅️➕ ⁉️ count_hits reverse xmas_token ❗️
+  🍉
+
+  0 ➡️ 🖍️🆕 cross_mas
+  🔂 row_idx 🆕⏩ 1 num_rows ➖ 1 ❗️ 🍇
+    🎶 🐽 rows row_idx ❗️ ❗️ ➡️ cells
+    🔂 col_idx 🆕⏩ 1 num_columns ➖ 1 ❗️ 🍇
+      🐽 cells col_idx ❗️ ➡️ cell
+      ↪️ cell 🙌 🔤A🔤 🍇
+        0 ➡️ 🖍️🆕 m_count
+        0 ➡️ 🖍️🆕 s_count
+        🎶 🐽 rows row_idx ➖ 1 ❗️ ❗️ ➡️ above_cells
+        🎶 🐽 rows row_idx ➕ 1 ❗️ ❗️ ➡️ below_cells
+        🆕🍨🐚🔡🍆▶️🐴 4 ❗️ ➡️ 🖍🆕 corners
+        🐽 above_cells col_idx ➖ 1 ❗️ ➡️ top_left
+        🐽 below_cells col_idx ➕ 1 ❗️ ➡️ bottom_right
+        🐻 corners top_left ❗️
+        🐻 corners 🐽 above_cells col_idx ➕ 1 ❗️ ❗️
+        🐻 corners 🐽 below_cells col_idx ➖ 1 ❗️ ❗️
+        🐻 corners bottom_right ❗️
+        🔂 corner corners 🍇
+          ↪️ corner 🙌 🔤M🔤 🍇 m_count ⬅️➕ 1 🍉
+          ↪️ corner 🙌 🔤S🔤 🍇 s_count ⬅️➕ 1 🍉
+        🍉
+        ↪️ m_count 🙌 2 🤝 s_count 🙌 2 🤝 ❎ top_left 🙌 bottom_right ❗️ 🍇 cross_mas ⬅️➕ 1 🍉
+      🍉
+    🍉
+  🍉
+
+  😀 🔤part one: 🧲xmas🧲🔤 ❗️
+  😀 🔤part one: 🧲cross_mas🧲🔤 ❗️
+🍉
